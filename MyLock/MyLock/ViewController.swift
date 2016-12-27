@@ -11,9 +11,14 @@ import Cocoa
 class ViewController: NSViewController {
     @IBOutlet weak var nameLabel: NSTextField!
     @IBAction func changLabelText(_ sender: Any) {
-        nameLabel.stringValue="Hello world"
+        let p=Process()
+        p.launchPath="/System/Library/CoreServices/Menu Extras/User.menu/Contents/Resources/CGSession"
+        p.arguments=["-suspend"]
+        p.launch()
     }
-
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
